@@ -9,7 +9,7 @@ var cloudsGroup, cloudImage;
 var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 
 var score=0;
-
+var index = index + 1 ;
 var gameOver, restart;
 
 localStorage["HighestScore"] = 0;
@@ -81,11 +81,13 @@ function draw() {
       trex.velocityY = -12;
     }
   
-    trex.velocityY = trex.velocityY + 0.8
+    trex.velocityY = trex.velocityY + 0.8;
+
     if (index === trex){
       trex[index - 1];
       camera.position.x = displayWidth/2;
     }
+
     if (ground.x < 0){
       ground.x = ground.width/2;
     }
